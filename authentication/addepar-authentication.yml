@@ -1,0 +1,45 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.addepar.com/docs/basic-authentication + https://developers.addepar.com/docs/oauth
+aid: addepar
+name: Addepar API Authentication
+docs: https://developers.addepar.com/docs/basic-authentication
+summary: >-
+  The Addepar API supports two authentication mechanisms over HTTPS: HTTP Basic
+  authentication using an API key/secret pair scoped to the creating user's
+  permissions plus an Addepar-Firm header, and OAuth 2.0 authorization-code flow
+  for third-party integrations acting on behalf of a user.
+schemes:
+- id: basic
+  type: http
+  scheme: basic
+  description: >-
+    Base64-encode "Key:Secret" and send as Authorization: Basic <encoded>.
+    Credentials respect the tool and data permissions of the user who created
+    the key. Requires the API Access permission granted by a firm administrator.
+  headers:
+  - name: Authorization
+    value: 'Basic <base64(Key:Secret)>'
+    required: true
+  - name: Addepar-Firm
+    value: '<Firm ID>'
+    required: true
+    description: Identifies the firm/organization for the request.
+  - name: Content-Type
+    value: application/vnd.api+json
+    required: false
+    description: Required on POST/PATCH requests (JSON:API media type).
+- id: oauth2
+  type: oauth2
+  flow: authorizationCode
+  description: >-
+    OAuth 2.0 authorization-code grant for third-party apps accessing user data
+    with limited, granted scopes. Addepar issues client_id, client_secret, and
+    approved scopes; the app supplies redirect URIs and ToS/privacy URLs.
+  token_url: https://api.addepar.com/public/oauth2/token
+  token_url_dev: https://examplefirm.clientdev.addepar.com/api/public/oauth2/token
+  authorization_url: provided per-integration by Addepar contact
+  supports_refresh_token: true
+  scopes_ref: ../scopes/addepar-scopes.yml
+notes:
+- No downloadable OpenAPI found (ReadMe-hosted docs + llms.txt index); profile derived from official docs prose.
