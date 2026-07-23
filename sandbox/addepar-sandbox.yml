@@ -1,0 +1,21 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.addepar.com/docs/urls
+aid: addepar
+name: Addepar Sandbox / Test Environments
+docs: https://developers.addepar.com/docs/urls
+summary: >-
+  Addepar provides non-production environments addressed by dedicated hostnames.
+  There are no publicly published static test credentials or test data fixtures;
+  access is provisioned per firm/partner.
+environments:
+- name: Development Environment
+  host_pattern: https://firmdomain.clientdev.addepar.com/api/
+  oauth_token_url: https://examplefirm.clientdev.addepar.com/api/public/oauth2/token
+- name: Premier Sandbox
+  host_pattern: https://partnername.sandbox.addepar.com/api/
+production:
+- https://api.addepar.com/
+- https://firmdomain.addepar.com/api/
+notes:
+- Credentials are provisioned by Addepar per firm/partner; no static published test tokens or test cards (not a payments API).

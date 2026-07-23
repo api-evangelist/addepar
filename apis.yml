@@ -1,28 +1,134 @@
 aid: addepar
 name: Addepar
-description: 'Addepar is a company surfaced as a portfolio company of 8vc, craft-ventures and added to
-  the API Evangelist network as a stub for enrichment. Sector: fintech. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Addepar is a wealth-management technology and data platform for investment
+  portfolio management, analysis, and reporting used by family offices, RIAs,
+  private banks, and wealth managers. Its REST API follows the JSON:API
+  specification (application/vnd.api+json) and exposes portfolio, transactions,
+  positions, entities, groups, attributes, benchmarks, files, jobs, roles,
+  teams, and users resources across Portfolio, Ownership Graph, and Admin
+  workflows. Access is secured with HTTP Basic authentication (API key/secret
+  plus an Addepar-Firm header) or an OAuth 2.0 authorization-code flow with
+  granular scopes. Addepar was surfaced as a portfolio company of 8VC and
+  Craft Ventures and enriched into the API Evangelist network.
 url: https://raw.githubusercontent.com/api-evangelist/addepar/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://logo.clearbit.com/addepar.com
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - 8vc
 - craft-ventures
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enriched-from-developer-portal
 specificationVersion: '0.20'
 created: '2026-07-17'
 modified: '2026-07-17'
 tags:
 - Company
 - Fintech
-apis: []
+- Wealth Management
+- Portfolio Management
+- Investment Management
+- Financial Data
+- JSON:API
+- REST
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Addepar API
+  description: >-
+    JSON:API-based REST API for portfolio management, transactions, positions,
+    the ownership graph (entities/groups), attributes, benchmarks, files, jobs,
+    billing, reporting, and administration on the Addepar platform.
+  humanURL: https://developers.addepar.com/
+  baseURL: https://api.addepar.com/v1/
+  tags:
+  - Wealth Management
+  - Portfolio Management
+  - JSON:API
+  properties:
+  - type: Documentation
+    url: https://developers.addepar.com/docs/welcome
+  - type: APIReference
+    url: https://developers.addepar.com/reference
+  - type: Authentication
+    url: authentication/addepar-authentication.yml
+  - type: OAuthScopes
+    url: scopes/addepar-scopes.yml
+  - type: Conventions
+    url: conventions/addepar-conventions.yml
+  - type: ErrorCatalog
+    url: errors/addepar-problem-types.yml
+  - type: RateLimits
+    url: rate-limits/addepar-rate-limits.yml
+  - type: DataModel
+    url: data-model/addepar-data-model.yml
+  - type: Packages
+    url: packages/addepar-packages.yml
+  - type: Lifecycle
+    url: lifecycle/addepar-lifecycle.yml
+  - type: Deprecation
+    url: lifecycle/addepar-lifecycle.yml
+  - type: ChangeLog
+    url: changelog/addepar-changelog.yml
+  - type: Conformance
+    url: conformance/addepar-conformance.yml
+  - type: Sandbox
+    url: sandbox/addepar-sandbox.yml
+  - type: MCPServer
+    url: mcp/addepar-mcp.yml
+  - type: LLMsTxt
+    url: llms/addepar-llms.txt
 common:
 - type: Website
   url: https://addepar.com
+- type: DeveloperPortal
+  url: https://developers.addepar.com/
+- type: Documentation
+  url: https://developers.addepar.com/docs/welcome
+- type: APIReference
+  url: https://developers.addepar.com/reference
+- type: GettingStarted
+  url: https://developers.addepar.com/docs/get-setup
+- type: SignUp
+  url: https://info.addepar.com/api-signup-list.html
+- type: Blog
+  url: https://addepar.com/blog
+- type: GitHubOrganization
+  url: https://github.com/Addepar
+- type: TermsOfService
+  url: https://developers.addepar.com/docs/terms-of-use
+- type: PrivacyPolicy
+  url: https://addepar.com/legal/privacy-policy
+- type: Integrations
+  url: https://addepar.com/integrations
+- type: Compliance
+  url: security/addepar-trust-center.yml
+- type: TrustCenter
+  url: security/addepar-trust-center.yml
+- type: DomainSecurity
+  url: security/addepar-domain-security.yml
+- type: WellKnown
+  url: well-known/addepar-well-known.yml
+- type: LLMsTxt
+  url: llms/addepar-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

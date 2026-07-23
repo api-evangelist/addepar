@@ -1,0 +1,56 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.addepar.com/docs/oauth
+aid: addepar
+name: Addepar OAuth 2.0 Scopes
+docs: https://developers.addepar.com/docs/oauth
+flow: authorizationCode
+token_url: https://api.addepar.com/public/oauth2/token
+summary: >-
+  Granular OAuth 2.0 scopes granted per integration by Addepar. Read scopes and
+  paired *_WRITE scopes gate access to the corresponding resource domains.
+scopes:
+- name: PROFILE
+  description: Access to the authorizing user's basic profile information.
+- name: PORTFOLIO
+  description: Read access to portfolio views, queries, and snapshots.
+- name: TRANSACTIONS
+  description: Read access to transactions.
+- name: TRANSACTIONS_WRITE
+  description: Create/update/delete transactions.
+- name: FILES
+  description: Read access to files.
+- name: FILES_WRITE
+  description: Upload and manage files.
+- name: GROUPS
+  description: Read access to groups.
+- name: GROUPS_WRITE
+  description: Create/update/delete groups.
+- name: ENTITIES
+  description: Read access to entities (ownership graph).
+- name: ENTITIES_WRITE
+  description: Create/update/delete entities.
+- name: POSITIONS
+  description: Read access to positions.
+- name: POSITIONS_WRITE
+  description: Create/update/delete positions.
+- name: USERS
+  description: Read access to users.
+- name: USERS_WRITE
+  description: Create/update/delete users.
+- name: TEAMS
+  description: Read access to teams.
+- name: TEAMS_WRITE
+  description: Create/update/delete teams.
+- name: AUDIT_TRAIL
+  description: Read access to the audit trail.
+- name: REPORTS_WRITE
+  description: Generate reports.
+- name: BENCHMARKS_READ
+  description: Read access to benchmarks.
+- name: BENCHMARKS_WRITE
+  description: Create/update/delete benchmarks.
+- name: BILLING_READ
+  description: Read access to billing (fees, fee schedules, billable portfolios).
+- name: BILLING_WRITE
+  description: Manage billing configuration.

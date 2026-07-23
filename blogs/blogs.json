@@ -1,0 +1,14 @@
+{
+  "repo": "addepar",
+  "feeds": [
+    {
+      "source": "https://info.addepar.com/api-signup-list.html",
+      "feed_url": "https://info.addepar.com/api-signup-list.html",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-07-20T13:31:34Z"
+}

@@ -1,0 +1,57 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.addepar.com/docs/response-codes-1
+aid: addepar
+name: Addepar Error / Response Codes
+docs: https://developers.addepar.com/docs/response-codes-1
+format: json:api
+media_type: application/vnd.api+json
+envelope:
+  note: Errors are returned as a JSON:API errors[] array; inspect the detail field (and source/type) for the specific cause. RFC 9457 problem+json is not used.
+  fields: [status, detail, source]
+statuses:
+- code: 200
+  title: OK
+  meaning: Successful GET or PATCH.
+- code: 201
+  title: Created
+  meaning: Successful POST.
+- code: 202
+  title: Accepted
+  meaning: Successful POST to a jobs route (async processing).
+- code: 204
+  title: No Content
+  meaning: Successful DELETE or relationship sub-route operation.
+- code: 303
+  title: See Other
+  meaning: Async job complete; follow the Location header for the result.
+- code: 400
+  title: Bad Request
+  meaning: Malformed query parameters or payload, or request exceeded the 60s runtime limit.
+- code: 401
+  title: Unauthorized
+  meaning: Authentication failure.
+- code: 403
+  title: Forbidden
+  meaning: Insufficient permissions.
+- code: 404
+  title: Not Found
+  meaning: Invalid URL or ID.
+- code: 405
+  title: Method Not Allowed
+  meaning: Unsupported HTTP verb for the resource.
+- code: 409
+  title: Conflict
+  meaning: Action would create an invalid data state.
+- code: 410
+  title: Gone
+  meaning: Resource expired.
+- code: 415
+  title: Unsupported Media Type
+  meaning: Invalid Content-Type header (expected application/vnd.api+json).
+- code: 429
+  title: Too Many Requests
+  meaning: Rate limit exceeded; see X-RateLimit-Retry-After.
+- code: 500
+  title: Internal Server Error
+  meaning: Unexpected server error.

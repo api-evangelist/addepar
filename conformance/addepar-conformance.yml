@@ -1,0 +1,36 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.addepar.com/docs (welcome, basic-authentication, oauth, pagination-1, response-codes-1)
+aid: addepar
+name: Addepar Standards Conformance
+assertions:
+- id: jsonapi
+  conforms: true
+  evidence: Docs state the API follows the JSON:API specification; media type application/vnd.api+json is required on writes.
+- id: oauth2
+  conforms: true
+  evidence: OAuth 2.0 authorization-code grant with refresh tokens; token endpoint https://api.addepar.com/public/oauth2/token; granular scopes documented.
+- id: oidc
+  conforms: false
+  evidence: No OpenID Connect discovery document or id_token issuance documented (well-known/openid-configuration returned 404).
+- id: rfc9457
+  conforms: false
+  evidence: Errors use the JSON:API errors[] array, not application/problem+json.
+- id: pagination
+  conforms: true
+  evidence: Cursor pagination via page[limit]/page[after] with links.next.
+- id: idempotency
+  conforms: false
+  evidence: No idempotency-key header documented; async jobs (202/303) and 409 Conflict provide write safety instead.
+- id: rate_limiting
+  conforms: true
+  evidence: Per-firm limits (50/15m, 1000/24h) with 429 + X-RateLimit-Retry-After.
+- id: fhir
+  conforms: false
+  evidence: Not a healthcare API.
+- id: scim
+  conforms: false
+  evidence: User/team management is JSON:API-native, not SCIM.
+- id: odata
+  conforms: false
+  evidence: Query surface is JSON:API + Addepar Portfolio Query, not OData.

@@ -1,0 +1,23 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.addepar.com/
+notes: >-
+  Addepar publishes no first-party API client SDK. Their public GitHub org
+  (github.com/Addepar) hosts UI/frontend and infra projects (ember-table,
+  ember-charts, RedFlag, etc.), not an API SDK. The libraries below are
+  community-maintained wrappers — official is false for all.
+packages:
+  - language: python
+    registry: github
+    name: addepy
+    url: https://github.com/maxsands700/addepy
+    install: pip install addepy
+    official: false
+    notes: 'Unofficial SDK mirroring the portfolio/ownership/admin namespaces.'
+  - language: python
+    registry: github
+    name: pyaddepar
+    url: https://github.com/lobnek/pyaddepar
+    install: pip install pyaddepar
+    official: false
+    notes: 'Community wrapper handling keys, pagination and pandas conversion.'

@@ -1,0 +1,34 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.addepar.com/docs/resource-overview
+notes: >-
+  Entity graph derived from the documented JSON:API resources (no downloadable
+  OpenAPI). Addepar organizes its API into three workflow domains: Portfolio,
+  Ownership Graph, and Admin.
+entities:
+  - {name: entity, domain: ownership, description: A node in the ownership graph (client, account, holding, etc.)}
+  - {name: entity_type, domain: ownership, description: Classifies entities}
+  - {name: group, domain: ownership, description: A grouping of entities}
+  - {name: position, domain: ownership, description: A holding/position tied to entities}
+  - {name: external_id, domain: ownership, description: External identifier mapped to an entity}
+  - {name: portfolio_view, domain: portfolio, description: A saved view definition}
+  - {name: portfolio_query, domain: portfolio, description: A dynamic portfolio query result}
+  - {name: snapshot, domain: portfolio, description: Point-in-time portfolio snapshot}
+  - {name: transaction, domain: portfolio, description: A financial transaction}
+  - {name: benchmark, domain: portfolio, description: A benchmark; has compositions}
+  - {name: job, domain: portfolio, description: Async job for long-running queries/reports}
+  - {name: user, domain: admin, description: An Addepar user}
+  - {name: team, domain: admin, description: A team of users}
+  - {name: role, domain: admin, description: A permission role}
+  - {name: report, domain: admin, description: A generated report}
+  - {name: file, domain: admin, description: A file or folder}
+relationships:
+  - {from: group, to: entity, kind: has_many, via: members}
+  - {from: entity, to: position, kind: has_many, via: positions}
+  - {from: entity, to: entity_type, kind: belongs_to, via: entity_type}
+  - {from: entity, to: external_id, kind: has_many, via: external_ids}
+  - {from: benchmark, to: benchmark_composition, kind: has_many, via: compositions}
+  - {from: portfolio_query, to: entity, kind: references, via: portfolio_type}
+  - {from: transaction, to: entity, kind: belongs_to, via: entity}
+  - {from: user, to: team, kind: belongs_to, via: team}
+  - {from: user, to: role, kind: has_many, via: roles}

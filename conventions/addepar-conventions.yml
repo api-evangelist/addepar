@@ -1,0 +1,64 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.addepar.com/docs (urls, basic-authentication, oauth, pagination-1, rate-limiting-1, response-codes-1)
+aid: addepar
+name: Addepar API Conventions
+summary: >-
+  Cross-cutting runtime semantics for the Addepar REST API, which follows the
+  JSON:API specification (media type application/vnd.api+json).
+spec_style: JSON:API
+media_type: application/vnd.api+json
+base_urls:
+- https://api.addepar.com/v1/
+- https://firmdomain.addepar.com/api/v1/
+auth:
+  styles: [http-basic, oauth2-authorization-code]
+  firm_header: Addepar-Firm
+  ref: ../authentication/addepar-authentication.yml
+versioning:
+  style: path
+  path: /v1/
+  notes: Single major version /v1 in the URL path; feature/breaking changes tracked via dated platform releases in the changelog.
+  ref: ../lifecycle/addepar-lifecycle.yml
+pagination:
+  style: cursor
+  params:
+  - name: page[limit]
+    default: 500
+    max: 2000
+    description: Number of items per page.
+  - name: page[after]
+    description: Cursor; the returned page begins with the item following this cursor.
+  response_fields:
+  - links.next (URL of the next page; null when no more pages)
+rate_limiting:
+  scope: per firm
+  limits:
+  - window: 15m
+    max_requests: 50
+  - window: 24h
+    max_requests: 1000
+  per_request_timeout_seconds: 60
+  headers:
+  - name: X-RateLimit-Retry-After
+    description: Seconds to wait before retrying after a 429.
+  on_exceeded: 429 Too Many Requests
+  ref: ../lifecycle/addepar-lifecycle.yml
+error_envelope:
+  format: json:api
+  media_type: application/vnd.api+json
+  fields:
+  - 'errors[].status'
+  - 'errors[].detail'
+  - 'errors[].source'
+  note: RFC 9457 problem+json is NOT used; errors follow the JSON:API errors[] array.
+  ref: ../errors/addepar-problem-types.yml
+idempotency:
+  supported: false
+  note: >-
+    No idempotency-key header is documented. Write safety is provided instead by
+    asynchronous jobs (POST returns 202 + Location; poll job status) and by
+    409 Conflict for actions that would create an invalid data state.
+async_jobs:
+  pattern: POST returns 202 Accepted with a job; completed job returns 303 See Other with a Location header to the result.
+  ref: https://developers.addepar.com/docs/jobs

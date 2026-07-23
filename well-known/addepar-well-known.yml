@@ -1,0 +1,28 @@
+generated: '2026-07-17'
+method: probed
+source: live HTTP probes 2026-07-17
+aid: addepar
+name: Addepar .well-known probes
+summary: No .well-known documents were served on the developer, apex, or api hosts.
+probes:
+- url: https://developers.addepar.com/.well-known/security.txt
+  status: 404
+  file: null
+- url: https://addepar.com/.well-known/security.txt
+  status: 404
+  file: null
+- url: https://api.addepar.com/.well-known/security.txt
+  status: 404
+  file: null
+- url: https://developers.addepar.com/.well-known/openid-configuration
+  status: 404
+  file: null
+- url: https://developers.addepar.com/.well-known/oauth-authorization-server
+  status: 404
+  file: null
+- url: https://developers.addepar.com/.well-known/api-catalog
+  status: 404
+  file: null
+- url: https://developers.addepar.com/.well-known/ai-plugin.json
+  status: 404
+  file: null

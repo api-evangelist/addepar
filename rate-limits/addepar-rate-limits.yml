@@ -1,0 +1,14 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.addepar.com/docs/rate-limiting-1
+scope: firm
+exceeded_status: 429
+headers:
+  - {name: X-RateLimit-Retry-After, description: Seconds to wait before retrying after a 429}
+rate_limits:
+  - {window: 15m, limit_count: 50, description: Maximum requests in a 15-minute window}
+  - {window: 24h, limit_count: 1000, description: Maximum requests in a 24-hour window}
+runtime:
+  max_seconds_per_request: 60
+  timeout_status: 400
+increases: 'Firms can request higher limits via Addepar Support with justification.'

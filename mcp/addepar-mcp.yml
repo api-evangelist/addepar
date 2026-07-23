@@ -1,0 +1,36 @@
+generated: '2026-07-17'
+method: derived
+source: https://developers.addepar.com/docs/resource-overview (no official MCP server found)
+aid: addepar
+name: Addepar MCP (candidate)
+status: candidate
+official_server: none
+note: >-
+  No official hosted/remote Addepar MCP server was found. The tools below are a
+  CANDIDATE surface derived from the documented JSON:API resource families; they
+  are not published by Addepar and no OpenAPI operationIds were available to
+  ground them precisely.
+transport: none
+candidate_tools:
+- name: list_portfolio_view
+  description: Query portfolio views/snapshots (Portfolio API).
+- name: run_portfolio_query
+  description: Run an Addepar Portfolio Query.
+- name: list_transactions
+  description: List/query transactions.
+- name: list_positions
+  description: List positions in the ownership graph.
+- name: list_entities
+  description: List entities (ownership graph).
+- name: list_groups
+  description: List groups.
+- name: list_attributes
+  description: List Addepar attributes.
+- name: list_benchmarks
+  description: List benchmarks.
+- name: list_files
+  description: List files.
+- name: get_job
+  description: Poll async job status (Jobs API).
+- name: list_users
+  description: List users.

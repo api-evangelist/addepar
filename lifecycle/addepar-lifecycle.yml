@@ -1,0 +1,31 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.addepar.com/changelog + https://developers.addepar.com/docs/rate-limiting-1 + https://developers.addepar.com/docs/updated-transactions-api-endpoints
+aid: addepar
+name: Addepar API Lifecycle
+versioning:
+  style: path
+  current: v1
+  release_scheme: Dated platform releases with numeric version (e.g. 2.170, 2.214).
+  changelog: https://developers.addepar.com/changelog
+  announcements: https://info.addepar.com/api-signup-list.html
+deprecation:
+  policy_documented: true
+  mechanism: Endpoints/methods are announced as discontinued in dated releases and a dedicated migration/updated-endpoints doc.
+  examples:
+  - GET/PATCH/DELETE for snapshots and valuations via the Transactions API discontinued in the 2024-02-09 release (v2.214).
+  docs: https://developers.addepar.com/docs/updated-transactions-api-endpoints
+  sunset_header_documented: false
+rate_limits:
+  per_firm:
+  - window: 15m
+    max_requests: 50
+  - window: 24h
+    max_requests: 1000
+  per_request_timeout_seconds: 60
+  header: X-RateLimit-Retry-After
+status_page:
+  documented: false
+  note: No public status page URL located during enrichment.
+sla:
+  documented: false

@@ -1,0 +1,20 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.addepar.com/changelog
+aid: addepar
+name: Addepar Developer Changelog
+docs: https://developers.addepar.com/changelog
+scheme: Numeric platform release versions (e.g. 2.170, 2.214) with release dates.
+announcements: https://info.addepar.com/api-signup-list.html
+entries:
+- version: '2.214'
+  date: '2024-02-09'
+  breaking: true
+  highlights:
+  - GET, PATCH, and DELETE methods for snapshots and valuations via the Transactions API were discontinued.
+- version: '2.170'
+  breaking: false
+  highlights:
+  - Introduced the Positions API to view, create, update, and delete positions and build a basic ownership structure programmatically.
+notes:
+- The changelog index page renders client-side; only entries confirmed via search are recorded here. See the docs URL for the full dated list.
