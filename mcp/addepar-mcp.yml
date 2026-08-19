@@ -5,11 +5,9 @@ aid: addepar
 name: Addepar MCP (candidate)
 status: candidate
 official_server: none
-note: >-
-  No official hosted/remote Addepar MCP server was found. The tools below are a
-  CANDIDATE surface derived from the documented JSON:API resource families; they
-  are not published by Addepar and no OpenAPI operationIds were available to
-  ground them precisely.
+note: No official hosted/remote Addepar MCP server was found. The tools below are a CANDIDATE surface
+  derived from the documented JSON:API resource families; they are not published by Addepar and no OpenAPI
+  operationIds were available to ground them precisely.
 transport: none
 candidate_tools:
 - name: list_portfolio_view
@@ -34,3 +32,8 @@ candidate_tools:
   description: Poll async job status (Jobs API).
 - name: list_users
   description: List users.
+deployment:
+  mode: none
+  verified: derived
+  checked: '2026-08-12'
+  source: catalog MCP census
