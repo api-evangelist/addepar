@@ -39,6 +39,15 @@ tags:
 - Company
 - Fintech
 - Wealth Management
+- Portfolio-Management
+- Investment Management
+- Financial Data
+- JSON:API
+- REST
+tags_raw:
+- Company
+- Fintech
+- Wealth Management
 - Portfolio Management
 - Investment Management
 - Financial Data
@@ -58,6 +67,10 @@ apis:
   humanURL: https://developers.addepar.com/
   baseURL: https://api.addepar.com/v1/
   tags:
+  - Wealth Management
+  - Portfolio-Management
+  - JSON:API
+  tags_raw:
   - Wealth Management
   - Portfolio Management
   - JSON:API
