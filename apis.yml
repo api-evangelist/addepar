@@ -125,6 +125,8 @@ apis:
   - type: LLMsTxt
     url: llms/addepar-llms.txt
 common:
+- type: RateLimits
+  url: rate-limits/addepar-rate-limits.yml
 - type: Website
   url: https://addepar.com
 - type: DeveloperPortal
