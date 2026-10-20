@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/addepar/main/json-schema/addepar-post-v1-portfolio-query-request-schema.json",
+  "title": "PostV1PortfolioQueryRequest",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PostV1PortfolioQueryRequest",
+  "type": "object",
+  "properties": {
+    "columns": {
+      "type": "array",
+      "description": "List of column attribute keys with optional arguments."
+    },
+    "groupings": {
+      "type": "array",
+      "description": "List of grouping attribute keys with optional arguments."
+    },
+    "start_date": {
+      "type": "string",
+      "description": "The start date of the time period of portfolio data in YYYY-MM-DD format."
+    },
+    "end_date": {
+      "type": "string",
+      "description": "The end date of the time period of portfolio data in YYYY-MM-DD format."
+    },
+    "portfolio_type": {
+      "type": "string",
+      "description": "The type of portfolio (e.g., ENTITY, ENTITY_FUNDS, GROUP, GROUP_FUNDS, FIRM, FIRM_ACCOUNTS, FIRM_CLIENTS, FIRM_HOUSEHOLDS, FIRM_UNVERIFIED_ACCOUNTS)."
+    },
+    "portfolio_id": {
+      "type": "number",
+      "description": "The ID of a portfolio configured in Addepar."
+    },
+    "filters": {
+      "type": "array",
+      "description": "A portfolio query filter may be attached to a portfolio query to filter rows from the result."
+    },
+    "hide_previous_holdings": {
+      "type": "boolean",
+      "description": "Set to true to exclude holdings not held at end of current period."
+    },
+    "group_by_historical_values": {
+      "type": "boolean",
+      "description": "Set to true to include previous values when grouping on a time varying attribute."
+    },
+    "group_by_multiple_attribute_values": {
+      "type": "boolean",
+      "description": "Set to true to breakout groupings by each value in an attribute with multiple values."
+    },
+    "look_through_composite_securities": {
+      "type": "boolean",
+      "description": "Set to true to look through components of composite securities (e.g., funds)."
+    },
+    "look_through_constituent_holdings": {
+      "type": "object",
+      "description": "Set how many constituents are returned in the response by lookthrough type and threshold."
+    },
+    "display_account_fees": {
+      "type": "boolean",
+      "description": "Set to true to show account fees."
+    },
+    "external_ids": {
+      "type": "array",
+      "description": "The external ID of a portfolio configured in Addepar."
+    }
+  },
+  "required": [
+    "columns",
+    "groupings",
+    "start_date",
+    "end_date",
+    "portfolio_type",
+    "portfolio_id"
+  ]
+}

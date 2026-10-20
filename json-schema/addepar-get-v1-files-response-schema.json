@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/addepar/main/json-schema/addepar-get-v1-files-response-schema.json",
+  "title": "GetV1FilesResponse",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetV1FilesResponse",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "description": "The file or folder's name."
+    },
+    "content_type": {
+      "type": "string",
+      "description": "The content type of the file or folder."
+    },
+    "created_at": {
+      "type": "string",
+      "description": "Time stamp of the file or folder's creation."
+    },
+    "modified_at": {
+      "type": "string",
+      "description": "Time stamp of the file or folder's modification."
+    },
+    "deleted_at": {
+      "type": "string",
+      "description": "Time stamp of the file or folder's deletion."
+    },
+    "bytes": {
+      "type": "number",
+      "description": "The size of the file in bytes."
+    },
+    "is_folder": {
+      "type": "string",
+      "description": "The designation of file or folder."
+    },
+    "parent_folder_id": {
+      "type": "number",
+      "description": "The ID of the parent folder."
+    },
+    "associated_groups": {
+      "type": "array",
+      "description": "Groups associated with a file."
+    },
+    "associated_entities": {
+      "type": "array",
+      "description": "Entities associated with a file."
+    }
+  }
+}

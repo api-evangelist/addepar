@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/addepar/main/json-schema/addepar-get-api-v1-contacts-contactid-response-schema.json",
+  "title": "GetApiV1ContactsContactidResponse",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1ContactsContactidResponse",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "suffix": {
+      "type": "string"
+    },
+    "external_user_id": {
+      "type": "string"
+    },
+    "login_email": {
+      "type": "string"
+    },
+    "portal_access": {
+      "type": "string"
+    },
+    "birthday": {
+      "type": "string",
+      "format": "date"
+    },
+    "employer": {
+      "type": "string"
+    },
+    "occupation": {
+      "type": "string"
+    },
+    "ssn": {
+      "type": "string"
+    },
+    "mailing_addresses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "street": {
+            "type": "string"
+          },
+          "street2": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "zip": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "address_type": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "emails": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "email_type": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "phone_numbers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "number": {
+            "type": "string"
+          },
+          "phone_type": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "family_members": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "first_name": {
+            "type": "string"
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "relationship": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "default_affiliation": {
+      "type": "object",
+      "properties": {
+        "entity_id": {
+          "type": "string"
+        },
+        "group_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "view_set_overrides": {
+      "type": "array",
+      "items": {}
+    }
+  }
+}

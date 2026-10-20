@@ -1,14 +1,32 @@
 generated: '2026-07-17'
 method: searched
 source: https://developers.addepar.com/docs/rate-limiting-1
+name: Addepar API Rate Limits
 scope: firm
 exceeded_status: 429
 headers:
-  - {name: X-RateLimit-Retry-After, description: Seconds to wait before retrying after a 429}
+- name: X-RateLimit-Retry-After
+  description: Seconds to wait before retrying after a 429
 rate_limits:
-  - {window: 15m, limit_count: 50, description: Maximum requests in a 15-minute window}
-  - {window: 24h, limit_count: 1000, description: Maximum requests in a 24-hour window}
+- window: 15m
+  limit_count: 50
+  description: Maximum requests in a 15-minute window
+- window: 24h
+  limit_count: 1000
+  description: Maximum requests in a 24-hour window
 runtime:
   max_seconds_per_request: 60
   timeout_status: 400
-increases: 'Firms can request higher limits via Addepar Support with justification.'
+increases: Firms can request higher limits via Addepar Support with justification.
+limits:
+- name: 15-minute firm limit
+  window: 15 minutes
+  max: 50
+  scope: firm
+  limit_text: Maximum number of requests in a 15-minute window is 50
+- name: 24-hour firm limit
+  window: 24 hours
+  max: 1000
+  scope: firm
+  limit_text: Maximum number of requests in 24-hour window is 1000
+limit_count: 2

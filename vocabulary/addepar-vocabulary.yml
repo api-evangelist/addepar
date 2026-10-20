@@ -1,0 +1,420 @@
+generated: '2026-10-20'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/addepar-openapi-generated.yml
+vocabulary:
+  name: Addepar Domain Vocabulary
+  description: 'Terms declared by Addepar''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-20'
+  terms:
+  - term: PostApiPublicOauth2TokenResponse
+    definition: 'Object declared by the contract with fields: access_token, refresh_token, addepar_subdomain, addepar_firm, token_type, expires_in.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PostApiPublicOauth2TokenResponse
+  - term: GetApiV1ArchiveFilesResponse
+    definition: 'Object declared by the contract with fields: content_type, bytes, name, created_at, deleted_at.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1ArchiveFilesResponse
+  - term: GetApiV1ArchiveFilesFileidResponse
+    definition: 'Object declared by the contract with fields: content_type, bytes, name, created_at, deleted_at.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1ArchiveFilesFileidResponse
+  - term: GetApiV1ArchiveFilesFileidDownloadResponse
+    definition: 'Object declared by the contract with fields: links, data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1ArchiveFilesFileidDownloadResponse
+  - term: GetApiV1BillablePortfoliosResponse
+    definition: 'Object declared by the contract with fields: data, meta.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1BillablePortfoliosResponse
+  - term: GetApiV1BillablePortfoliosBillableportfolioidResponse
+    definition: 'Object declared by the contract with fields: data, meta.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1BillablePortfoliosBillableportfolioidResponse
+  - term: GetApiV1ContactsResponse
+    definition: 'Object declared by the contract with fields: title, first_name, last_name, suffix, external_user_id, login_email, portal_access,
+      birthday, employer, occupation, ssn, mailing_addresses. (5 more)'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1ContactsResponse
+  - term: PatchApiV1ContactsRequest
+    definition: 'Object declared by the contract with fields: id, type, title, first_name, last_name, suffix, external_user_id, birthday, employer,
+      occupation, ssn, mailing_addresses. (3 more)'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PatchApiV1ContactsRequest
+  - term: PatchApiV1ContactsResponse
+    definition: 'Object declared by the contract with fields: id, type, attributes, relationships, links.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PatchApiV1ContactsResponse
+  - term: PostApiV1ContactsRequest
+    definition: 'Object declared by the contract with fields: title, first_name, last_name, suffix, external_user_id, login_email, birthday, employer,
+      occupation, ssn, mailing_addresses, emails. (2 more)'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PostApiV1ContactsRequest
+  - term: PostApiV1ContactsResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PostApiV1ContactsResponse
+  - term: PostApiV1ContactsContactidRelationshipsDefaultViewSetRequest
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PostApiV1ContactsContactidRelationshipsDefaultViewSetRequest
+  - term: PatchApiV1ContactsContactidRelationshipsGroupAffiliationsReq
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PatchApiV1ContactsContactidRelationshipsGroupAffiliationsReq
+  - term: PostApiV1ContactsContactidRelationshipsGroupAffiliationsRequ
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PostApiV1ContactsContactidRelationshipsGroupAffiliationsRequ
+  - term: PatchApiV1ContactsContactidRelationshipsTeamRequest
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PatchApiV1ContactsContactidRelationshipsTeamRequest
+  - term: GetApiV1ContactsContactidResponse
+    definition: 'Object declared by the contract with fields: title, first_name, last_name, suffix, external_user_id, login_email, portal_access,
+      birthday, employer, occupation, ssn, mailing_addresses. (5 more)'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1ContactsContactidResponse
+  - term: GetApiV1ContactsContactidRelationshipsDefaultViewSetResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1ContactsContactidRelationshipsDefaultViewSetResponse
+  - term: GetApiV1ContactsContactidRelationshipsEntityAffiliationsResp
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1ContactsContactidRelationshipsEntityAffiliationsResp
+  - term: GetApiV1ContactsContactidRelationshipsGroupAffiliationsRespo
+    definition: 'Object declared by the contract with fields: title, first_name, last_name, suffix, external_user_id, login_email, portal_access,
+      birthday, employer, occupation, ssn, mailing_addresses. (5 more)'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1ContactsContactidRelationshipsGroupAffiliationsRespo
+  - term: GetApiV1ContactsContactidRelationshipsTeamResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1ContactsContactidRelationshipsTeamResponse
+  - term: GetApiV1EntitiesResponse
+    definition: 'Object declared by the contract with fields: id, type, attributes, links.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1EntitiesResponse
+  - term: GetApiV1FilesResponse
+    definition: 'Object declared by the contract with fields: content_type, bytes, name, created_at.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1FilesResponse
+  - term: GetApiV1FilesFileidResponse
+    definition: 'Object declared by the contract with fields: content_type, bytes, name, created_at.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1FilesFileidResponse
+  - term: GetApiV1FilesFileidDownloadResponse
+    definition: 'Object declared by the contract with fields: content_type, bytes, name, created_at, deleted_at.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1FilesFileidDownloadResponse
+  - term: GetApiV1FilesFileidRelationshipsAssociatedEntitiesResponse
+    definition: 'Object declared by the contract with fields: links, data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1FilesFileidRelationshipsAssociatedEntitiesResponse
+  - term: GetApiV1FilesFileidRelationshipsAssociatedGroupsResponse
+    definition: 'Object declared by the contract with fields: links, data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1FilesFileidRelationshipsAssociatedGroupsResponse
+  - term: GetApiV1GroupsResponse
+    definition: 'Object declared by the contract with fields: name, created_at, modified_at.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1GroupsResponse
+  - term: GetApiV1GroupsGroupidResponse
+    definition: 'Object declared by the contract with fields: name.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1GroupsGroupidResponse
+  - term: GetApiV1GroupsGroupidMembersResponse
+    definition: 'Object declared by the contract with fields: data, links.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1GroupsGroupidMembersResponse
+  - term: GetApiV1GroupsGroupidRelationshipsChildGroupsResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1GroupsGroupidRelationshipsChildGroupsResponse
+  - term: GetApiV1GroupsGroupidRelationshipsMembersResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1GroupsGroupidRelationshipsMembersResponse
+  - term: GetApiV1JobsResponse
+    definition: 'Object declared by the contract with fields: id, type, attributes, links.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1JobsResponse
+  - term: GetApiV1JobsB6C1B9Da438711Ef8636Dd826F8Aeed1ADownloadRespons
+    definition: 'Object declared by the contract with fields: id, type, attributes, links.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1JobsB6C1B9Da438711Ef8636Dd826F8Aeed1ADownloadRespons
+  - term: PostApiV1PortfolioQueryRequest
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PostApiV1PortfolioQueryRequest
+  - term: PostApiV1PortfolioQueryResponse
+    definition: 'Object declared by the contract with fields: columns, groupings.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PostApiV1PortfolioQueryResponse
+  - term: GetApiV1PortfolioViewsResponse
+    definition: 'Object declared by the contract with fields: data, id, type, share_type, display_name.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1PortfolioViewsResponse
+  - term: GetApiV1RolesResponse
+    definition: 'Object declared by the contract with fields: id, type, name, assigned_users.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1RolesResponse
+  - term: GetApiV1RolesRoleidResponse
+    definition: 'Object declared by the contract with fields: id, type, name, assigned_users.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1RolesRoleidResponse
+  - term: GetApiV1RolesRoleidAssignedUsersResponse
+    definition: 'Object declared by the contract with fields: id, type, email, first_name, last_name, login_method, two_factor_auth_enabled, admin_access,
+      all_data_access, external_user_id, permissioned_entities, assigned_role. (1 more)'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1RolesRoleidAssignedUsersResponse
+  - term: GetApiV1RolesRoleidRelationshipsAssignedUsersResponse
+    definition: 'Object declared by the contract with fields: id, type.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1RolesRoleidRelationshipsAssignedUsersResponse
+  - term: PatchApiV1RolesRoleidRelationshipsAssignedUsersRequest
+    definition: 'Object declared by the contract with fields: id, type.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PatchApiV1RolesRoleidRelationshipsAssignedUsersRequest
+  - term: PostApiV1RolesRoleidRelationshipsAssignedUsersRequest
+    definition: 'Object declared by the contract with fields: id, type.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PostApiV1RolesRoleidRelationshipsAssignedUsersRequest
+  - term: GetApiV1UsersResponse
+    definition: 'Object declared by the contract with fields: email, first_name, last_name, login_method, two_factor_auth_enabled, admin_access,
+      all_data_access, external_user_id.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1UsersResponse
+  - term: GetApiV1UsersUseridResponse
+    definition: 'Object declared by the contract with fields: exclude_self_link, link, pagination_params, included_params, filter_params, fields_param.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1UsersUseridResponse
+  - term: GetApiV1UsersUseridRelationshipsAssignedRoleResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1UsersUseridRelationshipsAssignedRoleResponse
+  - term: GetApiV1UsersUseridRelationshipsPermissionedGroupsResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetApiV1UsersUseridRelationshipsPermissionedGroupsResponse
+  - term: GetV1ArchiveFilesResponse
+    definition: 'Object declared by the contract with fields: id, type, name, content_type, created_at, deleted_at, bytes, is_folder, parent_folder_id,
+      associated_groups, associated_entities.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetV1ArchiveFilesResponse
+  - term: GetV1ArchiveFilesIdResponse
+    definition: 'Object declared by the contract with fields: id, type, name, content_type, created_at, deleted_at, bytes, associated_groups,
+      associated_entities.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetV1ArchiveFilesIdResponse
+  - term: GetV1ArgumentsResponse
+    definition: 'Object declared by the contract with fields: data, included, links.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetV1ArgumentsResponse
+  - term: GetV1ArgumentsIdResponse
+    definition: 'Object declared by the contract with fields: data, included.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetV1ArgumentsIdResponse
+  - term: GetV1AttributesResponse
+    definition: 'Object declared by the contract with fields: data, included, links.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetV1AttributesResponse
+  - term: GetV1AttributesIdResponse
+    definition: 'Object declared by the contract with fields: data, included.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetV1AttributesIdResponse
+  - term: GetV1AttributesIdArgumentsResponse
+    definition: 'Object declared by the contract with fields: data, included, links.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetV1AttributesIdArgumentsResponse
+  - term: GetV1AttributesIdRelationshipsArgumentsResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetV1AttributesIdRelationshipsArgumentsResponse
+  - term: PostV1AttributesQueryRequest
+    definition: 'Object declared by the contract with fields: data, type, attributes, attribute_keys.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PostV1AttributesQueryRequest
+  - term: PostV1AttributesQueryResponse
+    definition: 'Object declared by the contract with fields: data, included, links.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PostV1AttributesQueryResponse
+  - term: PostV1AuditTrailRequest
+    definition: 'Object declared by the contract with fields: data, object_type, start_date, end_date, actions, user_type, users.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PostV1AuditTrailRequest
+  - term: PostV1AuditTrailResponse
+    definition: 'Object declared by the contract with fields: data, id, type, action, performed_by_user_id, timestamp, source, old_value, new_value,
+      links, included.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PostV1AuditTrailResponse
+  - term: GetV1AuditTrailIdResponse
+    definition: 'Object declared by the contract with fields: id, type, attributes, links.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetV1AuditTrailIdResponse
+  - term: GetV1BenchmarksResponse
+    definition: 'Object declared by the contract with fields: data, included, links.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetV1BenchmarksResponse
+  - term: PatchV1BenchmarksRequest
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PatchV1BenchmarksRequest
+  - term: PatchV1BenchmarksResponse
+    definition: 'Object declared by the contract with fields: data, included, links.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PatchV1BenchmarksResponse
+  - term: PostV1BenchmarksRequest
+    definition: 'Object declared by the contract with fields: benchmark_type, name, blended, fixed_return, portfolio, security.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PostV1BenchmarksRequest
+  - term: PostV1BenchmarksResponse
+    definition: 'Object declared by the contract with fields: data, included.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PostV1BenchmarksResponse
+  - term: GetV1BenchmarksIdResponse
+    definition: 'Object declared by the contract with fields: data, included.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetV1BenchmarksIdResponse
+  - term: PatchV1BenchmarksIdRequest
+    definition: 'Object declared by the contract with fields: id, type, attributes.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PatchV1BenchmarksIdRequest
+  - term: PatchV1BenchmarksIdResponse
+    definition: 'Object declared by the contract with fields: data, included.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PatchV1BenchmarksIdResponse
+  - term: GetV1BillablePortfoliosResponse
+    definition: 'Object declared by the contract with fields: id, entity_id, group_id, schedule_id, is_archived, last_modified.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetV1BillablePortfoliosResponse
+  - term: PostV1BillablePortfoliosRequest
+    definition: 'Object declared by the contract with fields: entity_id, group_id, schedule_id.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PostV1BillablePortfoliosRequest
+  - term: PostV1BillablePortfoliosResponse
+    definition: 'Object declared by the contract with fields: id, entity_id, group_id, schedule_id, is_archived, last_modified.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PostV1BillablePortfoliosResponse
+  - term: GetV1BillablePortfoliosIdResponse
+    definition: 'Object declared by the contract with fields: id, entity_id, group_id, schedule_id, is_archived, last_modified.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetV1BillablePortfoliosIdResponse
+  - term: PatchV1BillablePortfoliosIdRelationshipsFeeSchedulesRequest
+    definition: 'Object declared by the contract with fields: id, type.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PatchV1BillablePortfoliosIdRelationshipsFeeSchedulesRequest
+  - term: PatchV1BillablePortfoliosRelationshipsFeeSchedulesRequest
+    definition: 'Object declared by the contract with fields: id, type, schedule_id.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PatchV1BillablePortfoliosRelationshipsFeeSchedulesRequest
+  - term: GetV1ContactsResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetV1ContactsResponse
+  - term: PostV1ContactsRequest
+    definition: 'Object declared by the contract with fields: type, attributes.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PostV1ContactsRequest
+  - term: PostV1ContactsResponse
+    definition: 'Object declared by the contract with fields: id, type, attributes, relationships, links.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PostV1ContactsResponse
+  - term: GetV1ContactsContactIdRelationshipsDefaultViewSetResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetV1ContactsContactIdRelationshipsDefaultViewSetResponse
+  - term: PostV1ContactsContactIdRelationshipsDefaultViewSetRequest
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PostV1ContactsContactIdRelationshipsDefaultViewSetRequest
+  - term: GetV1ContactsContactIdRelationshipsEntityAffiliationsRespons
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/GetV1ContactsContactIdRelationshipsEntityAffiliationsRespons
+  - term: PatchV1ContactsContactIdRelationshipsEntityAffiliationsReque
+    definition: 'Object declared by the contract with fields: id, type.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/addepar-openapi-generated.yml#/components/schemas/PatchV1ContactsContactIdRelationshipsEntityAffiliationsReque

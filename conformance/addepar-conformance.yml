@@ -9,7 +9,8 @@ assertions:
   evidence: Docs state the API follows the JSON:API specification; media type application/vnd.api+json is required on writes.
 - id: oauth2
   conforms: true
-  evidence: OAuth 2.0 authorization-code grant with refresh tokens; token endpoint https://api.addepar.com/public/oauth2/token; granular scopes documented.
+  evidence: OAuth 2.0 authorization-code grant with refresh tokens; token endpoint https://api.addepar.com/public/oauth2/token; granular scopes
+    documented.
 - id: oidc
   conforms: false
   evidence: No OpenID Connect discovery document or id_token issuance documented (well-known/openid-configuration returned 404).
@@ -34,3 +35,19 @@ assertions:
 - id: odata
   conforms: false
   evidence: Query surface is JSON:API + Addepar Portfolio Query, not OData.
+standards:
+- id: openapi-3.1
+  conforms: true
+  evidence: the document declares 3.1.0
+- id: oauth2
+  conforms: false
+  evidence: 'securitySchemes: bearer (http)'
+- id: rfc9457
+  conforms: false
+  evidence: no response declares application/problem+json
+- id: idempotency
+  conforms: false
+  evidence: no idempotency key parameter on mutating operations
+- id: pagination
+  conforms: true
+  evidence: list operations take page[cursor], page[limit]

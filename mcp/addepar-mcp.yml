@@ -1,13 +1,15 @@
-generated: '2026-07-17'
-method: derived
-source: https://developers.addepar.com/docs/resource-overview (no official MCP server found)
+generated: '2026-10-20'
+method: searched
+source: https://info.addepar.com/addepar-mcp.html (beta waitlist page, HTTP 200, 2026-10-20);
+  POST https://developers.addepar.com/mcp 401
 aid: addepar
 name: Addepar MCP (candidate)
 status: candidate
-official_server: none
-note: No official hosted/remote Addepar MCP server was found. The tools below are a CANDIDATE surface
-  derived from the documented JSON:API resource families; they are not published by Addepar and no OpenAPI
-  operationIds were available to ground them precisely.
+official_server: beta (waitlist)
+note: No official hosted/remote Addepar MCP server was found. The tools below are
+  a CANDIDATE surface derived from the documented JSON:API resource families; they
+  are not published by Addepar and no OpenAPI operationIds were available to ground
+  them precisely.
 transport: none
 candidate_tools:
 - name: list_portfolio_view
@@ -34,6 +36,27 @@ candidate_tools:
   description: List users.
 deployment:
   mode: none
-  verified: derived
-  checked: '2026-08-12'
-  source: catalog MCP census
+  auth: unknown
+  verified: probed
+  note: 'An MCP endpoint answers on the ReadMe-hosted docs host: POST https://developers.addepar.com/mcp
+    tools/list returned 401 {"code":-32001,"message":"Authorization required"} with
+    WWW-Authenticate: Bearer realm="mcp" (2026-10-20); GET says "This URL can only
+    be accessed with a MCP client". Addepar docs (llms.txt index, 61 pages) never
+    mention it, no oauth-protected-resource document is served (404), and it sits
+    on the docs platform host, so it is recorded as an undocumented gated endpoint,
+    not as an Addepar API MCP server. Separately, Addepar announces an Addepar MCP
+    for Claude in a waitlist-only beta (info.addepar.com/addepar-mcp.html) with no
+    published endpoint; mode stays none until an endpoint is documented.'
+gated_endpoints:
+- url: https://developers.addepar.com/mcp
+  status: 401
+  probed: '2026-10-20'
+announced:
+  url: https://info.addepar.com/addepar-mcp.html
+  status: 200
+  quote: Governed portfolio intelligence is now available in Claude through the Addepar
+    MCP. Be among the first firms to join the beta, and give your advisors instant,
+    trustworthy answers wherever they already work, grounded in your firm's Addepar
+    data.
+  note: Linked from the addepar.com/integrations banner "Join the Addepar MCP beta
+    waitlist!". No public endpoint URL, install command or tool list is published.

@@ -5,8 +5,15 @@
       "source": "https://addepar.com/blog",
       "feed_url": "https://addepar.com/blog/rss/",
       "title": "",
-      "saved": 1,
+      "saved": 0,
       "method": "discovered"
+    },
+    {
+      "source": "https://addepar.com/blog/rss/",
+      "feed_url": "https://addepar.com/blog/rss/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
     },
     {
       "source": "https://info.addepar.com/api-signup-list.html",
@@ -16,6 +23,6 @@
       "method": "none"
     }
   ],
-  "post_count": 1,
-  "fetched": "2026-10-10T13:15:00Z"
+  "post_count": 50,
+  "fetched": "2026-10-17T14:53:57Z"
 }

@@ -1,0 +1,87 @@
+generated: '2026-10-20'
+method: searched
+source:
+- https://integrations.addepar.com/
+checked:
+- https://addepar.com/integrations
+- https://integrations.addepar.com/
+- https://zapier.com/apps/addepar/integrations (404)
+- https://addepar.com/partners
+- https://composio.dev/toolkits/addepar
+- https://monid.ai/tools/addepar
+- https://n8n.io/integrations/addepar/
+- https://zapier.com/apps/addepar/integrations
+summary: null
+marketplace_apps:
+- marketplace: own
+  url: https://integrations.addepar.com/
+  app_count: null
+  categories:
+  - Portfolio Data Feeds
+  - Market Data Feeds
+  - Integrations
+  - Services & Consultants
+  note: Addepar Integration Center; the home page lists featured apps only and states no total count.
+  app: Addepar Integration Center
+edges:
+- name: Trusted Family
+  partner: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: unknown
+  evidence: https://integrations.addepar.com/product/trusted-family
+  note: Generate and distribute Addepar reports through Trusted Family
+  partner_name: Trusted Family
+- name: DPL Financial Partners
+  partner: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: unknown
+  evidence: https://integrations.addepar.com/product/dpl-financial-partners
+  note: Get an integrated view of clients' annuities with DPL inside Addepar
+  partner_name: DPL Financial Partners
+- name: Appraisal Bureau
+  partner: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: unknown
+  evidence: https://integrations.addepar.com/product/appraisal-bureau
+  note: Infrastructure for Art Asset Management
+  partner_name: Appraisal Bureau
+- name: Wealthbox
+  partner: wealthbox
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: unknown
+  evidence: https://integrations.addepar.com/product/wealthbox
+  note: See financial account data from Addepar on Wealthbox contact records
+  partner_name: Wealthbox
+- name: MSCI Wealth Manager
+  partner: msci
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: unknown
+  evidence: https://integrations.addepar.com/product/msciwealthmanager
+  note: Send holdings and transactions to MSCI Wealth Manager
+  partner_name: MSCI Wealth Manager
+- name: eMoney
+  partner: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: unknown
+  evidence: https://integrations.addepar.com/product/emoney-advisor
+  note: Addepar integrated data powers financial planning
+  partner_name: eMoney
+templates: []

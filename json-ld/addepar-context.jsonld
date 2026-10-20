@@ -1,0 +1,504 @@
+{
+  "@context": {
+    "@vocab": "https://addepar.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "addepar": "https://addepar.com/schema#",
+    "PostApiPublicOauth2TokenResponse": "addepar:PostApiPublicOauth2TokenResponse",
+    "access_token": {
+      "@id": "addepar:access_token",
+      "@type": "xsd:string"
+    },
+    "refresh_token": {
+      "@id": "addepar:refresh_token",
+      "@type": "xsd:string"
+    },
+    "addepar_subdomain": {
+      "@id": "addepar:addepar_subdomain",
+      "@type": "xsd:string"
+    },
+    "addepar_firm": {
+      "@id": "addepar:addepar_firm",
+      "@type": "xsd:string"
+    },
+    "token_type": {
+      "@id": "addepar:token_type",
+      "@type": "xsd:string"
+    },
+    "expires_in": {
+      "@id": "addepar:expires_in",
+      "@type": "xsd:integer"
+    },
+    "GetApiV1ArchiveFilesResponse": "addepar:GetApiV1ArchiveFilesResponse",
+    "content_type": {
+      "@id": "addepar:content_type",
+      "@type": "xsd:string"
+    },
+    "bytes": {
+      "@id": "addepar:bytes",
+      "@type": "xsd:integer"
+    },
+    "name": {
+      "@id": "addepar:name",
+      "@type": "xsd:string"
+    },
+    "created_at": {
+      "@id": "addepar:created_at",
+      "@type": "xsd:dateTime"
+    },
+    "deleted_at": {
+      "@id": "addepar:deleted_at",
+      "@type": "xsd:dateTime"
+    },
+    "GetApiV1ArchiveFilesFileidResponse": "addepar:GetApiV1ArchiveFilesFileidResponse",
+    "GetApiV1ArchiveFilesFileidDownloadResponse": "addepar:GetApiV1ArchiveFilesFileidDownloadResponse",
+    "links": {
+      "@id": "addepar:links"
+    },
+    "data": {
+      "@id": "addepar:data",
+      "@container": "@list"
+    },
+    "GetApiV1BillablePortfoliosResponse": "addepar:GetApiV1BillablePortfoliosResponse",
+    "meta": {
+      "@id": "addepar:meta"
+    },
+    "GetApiV1BillablePortfoliosBillableportfolioidResponse": "addepar:GetApiV1BillablePortfoliosBillableportfolioidResponse",
+    "GetApiV1ContactsResponse": "addepar:GetApiV1ContactsResponse",
+    "title": {
+      "@id": "addepar:title",
+      "@type": "xsd:string"
+    },
+    "first_name": {
+      "@id": "addepar:first_name",
+      "@type": "xsd:string"
+    },
+    "last_name": {
+      "@id": "addepar:last_name",
+      "@type": "xsd:string"
+    },
+    "suffix": {
+      "@id": "addepar:suffix",
+      "@type": "xsd:string"
+    },
+    "external_user_id": {
+      "@id": "addepar:external_user_id",
+      "@type": "xsd:string"
+    },
+    "login_email": {
+      "@id": "addepar:login_email",
+      "@type": "xsd:string"
+    },
+    "portal_access": {
+      "@id": "addepar:portal_access",
+      "@type": "xsd:string"
+    },
+    "birthday": {
+      "@id": "addepar:birthday",
+      "@type": "xsd:date"
+    },
+    "employer": {
+      "@id": "addepar:employer",
+      "@type": "xsd:string"
+    },
+    "occupation": {
+      "@id": "addepar:occupation",
+      "@type": "xsd:string"
+    },
+    "ssn": {
+      "@id": "addepar:ssn",
+      "@type": "xsd:string"
+    },
+    "mailing_addresses": {
+      "@id": "addepar:mailing_addresses",
+      "@container": "@list"
+    },
+    "emails": {
+      "@id": "addepar:emails",
+      "@container": "@list"
+    },
+    "phone_numbers": {
+      "@id": "addepar:phone_numbers",
+      "@container": "@list"
+    },
+    "family_members": {
+      "@id": "addepar:family_members",
+      "@container": "@list"
+    },
+    "default_affiliation": {
+      "@id": "addepar:default_affiliation"
+    },
+    "view_set_overrides": {
+      "@id": "addepar:view_set_overrides",
+      "@container": "@list"
+    },
+    "PatchApiV1ContactsRequest": "addepar:PatchApiV1ContactsRequest",
+    "id": {
+      "@id": "addepar:id",
+      "@type": "xsd:string"
+    },
+    "type": {
+      "@id": "addepar:type",
+      "@type": "xsd:string"
+    },
+    "PatchApiV1ContactsResponse": "addepar:PatchApiV1ContactsResponse",
+    "attributes": {
+      "@id": "addepar:attributes"
+    },
+    "relationships": {
+      "@id": "addepar:relationships"
+    },
+    "PostApiV1ContactsRequest": "addepar:PostApiV1ContactsRequest",
+    "PostApiV1ContactsResponse": "addepar:PostApiV1ContactsResponse",
+    "PostApiV1ContactsContactidRelationshipsDefaultViewSetRequest": "addepar:PostApiV1ContactsContactidRelationshipsDefaultViewSetRequest",
+    "PatchApiV1ContactsContactidRelationshipsGroupAffiliationsReq": "addepar:PatchApiV1ContactsContactidRelationshipsGroupAffiliationsReq",
+    "PostApiV1ContactsContactidRelationshipsGroupAffiliationsRequ": "addepar:PostApiV1ContactsContactidRelationshipsGroupAffiliationsRequ",
+    "PatchApiV1ContactsContactidRelationshipsTeamRequest": "addepar:PatchApiV1ContactsContactidRelationshipsTeamRequest",
+    "GetApiV1ContactsContactidResponse": "addepar:GetApiV1ContactsContactidResponse",
+    "GetApiV1ContactsContactidRelationshipsDefaultViewSetResponse": "addepar:GetApiV1ContactsContactidRelationshipsDefaultViewSetResponse",
+    "GetApiV1ContactsContactidRelationshipsEntityAffiliationsResp": "addepar:GetApiV1ContactsContactidRelationshipsEntityAffiliationsResp",
+    "GetApiV1ContactsContactidRelationshipsGroupAffiliationsRespo": "addepar:GetApiV1ContactsContactidRelationshipsGroupAffiliationsRespo",
+    "GetApiV1ContactsContactidRelationshipsTeamResponse": "addepar:GetApiV1ContactsContactidRelationshipsTeamResponse",
+    "GetApiV1EntitiesResponse": "addepar:GetApiV1EntitiesResponse",
+    "GetApiV1FilesResponse": "addepar:GetApiV1FilesResponse",
+    "GetApiV1FilesFileidResponse": "addepar:GetApiV1FilesFileidResponse",
+    "GetApiV1FilesFileidDownloadResponse": "addepar:GetApiV1FilesFileidDownloadResponse",
+    "GetApiV1FilesFileidRelationshipsAssociatedEntitiesResponse": "addepar:GetApiV1FilesFileidRelationshipsAssociatedEntitiesResponse",
+    "GetApiV1FilesFileidRelationshipsAssociatedGroupsResponse": "addepar:GetApiV1FilesFileidRelationshipsAssociatedGroupsResponse",
+    "GetApiV1GroupsResponse": "addepar:GetApiV1GroupsResponse",
+    "modified_at": {
+      "@id": "addepar:modified_at",
+      "@type": "xsd:dateTime"
+    },
+    "GetApiV1GroupsGroupidResponse": "addepar:GetApiV1GroupsGroupidResponse",
+    "GetApiV1GroupsGroupidMembersResponse": "addepar:GetApiV1GroupsGroupidMembersResponse",
+    "GetApiV1GroupsGroupidRelationshipsChildGroupsResponse": "addepar:GetApiV1GroupsGroupidRelationshipsChildGroupsResponse",
+    "GetApiV1GroupsGroupidRelationshipsMembersResponse": "addepar:GetApiV1GroupsGroupidRelationshipsMembersResponse",
+    "GetApiV1JobsResponse": "addepar:GetApiV1JobsResponse",
+    "GetApiV1JobsB6C1B9Da438711Ef8636Dd826F8Aeed1ADownloadRespons": "addepar:GetApiV1JobsB6C1B9Da438711Ef8636Dd826F8Aeed1ADownloadRespons",
+    "PostApiV1PortfolioQueryRequest": "addepar:PostApiV1PortfolioQueryRequest",
+    "PostApiV1PortfolioQueryResponse": "addepar:PostApiV1PortfolioQueryResponse",
+    "columns": {
+      "@id": "addepar:columns",
+      "@container": "@list"
+    },
+    "groupings": {
+      "@id": "addepar:groupings",
+      "@container": "@list"
+    },
+    "GetApiV1PortfolioViewsResponse": "addepar:GetApiV1PortfolioViewsResponse",
+    "share_type": {
+      "@id": "addepar:share_type",
+      "@type": "xsd:string"
+    },
+    "display_name": {
+      "@id": "addepar:display_name",
+      "@type": "xsd:string"
+    },
+    "GetApiV1RolesResponse": "addepar:GetApiV1RolesResponse",
+    "assigned_users": {
+      "@id": "addepar:assigned_users",
+      "@type": "xsd:string"
+    },
+    "GetApiV1RolesRoleidResponse": "addepar:GetApiV1RolesRoleidResponse",
+    "GetApiV1RolesRoleidAssignedUsersResponse": "addepar:GetApiV1RolesRoleidAssignedUsersResponse",
+    "email": {
+      "@id": "addepar:email",
+      "@type": "xsd:string"
+    },
+    "login_method": {
+      "@id": "addepar:login_method",
+      "@type": "xsd:string"
+    },
+    "two_factor_auth_enabled": {
+      "@id": "addepar:two_factor_auth_enabled",
+      "@type": "xsd:boolean"
+    },
+    "admin_access": {
+      "@id": "addepar:admin_access",
+      "@type": "xsd:boolean"
+    },
+    "all_data_access": {
+      "@id": "addepar:all_data_access",
+      "@type": "xsd:boolean"
+    },
+    "permissioned_entities": {
+      "@id": "addepar:permissioned_entities",
+      "@type": "xsd:string"
+    },
+    "assigned_role": {
+      "@id": "addepar:assigned_role",
+      "@type": "xsd:string"
+    },
+    "permissioned_groups": {
+      "@id": "addepar:permissioned_groups",
+      "@type": "xsd:string"
+    },
+    "GetApiV1RolesRoleidRelationshipsAssignedUsersResponse": "addepar:GetApiV1RolesRoleidRelationshipsAssignedUsersResponse",
+    "PatchApiV1RolesRoleidRelationshipsAssignedUsersRequest": "addepar:PatchApiV1RolesRoleidRelationshipsAssignedUsersRequest",
+    "PostApiV1RolesRoleidRelationshipsAssignedUsersRequest": "addepar:PostApiV1RolesRoleidRelationshipsAssignedUsersRequest",
+    "GetApiV1UsersResponse": "addepar:GetApiV1UsersResponse",
+    "GetApiV1UsersUseridResponse": "addepar:GetApiV1UsersUseridResponse",
+    "exclude_self_link": {
+      "@id": "addepar:exclude_self_link",
+      "@type": "xsd:boolean"
+    },
+    "link": {
+      "@id": "addepar:link",
+      "@type": "xsd:string"
+    },
+    "pagination_params": {
+      "@id": "addepar:pagination_params",
+      "@type": "xsd:string"
+    },
+    "included_params": {
+      "@id": "addepar:included_params",
+      "@type": "xsd:string"
+    },
+    "filter_params": {
+      "@id": "addepar:filter_params",
+      "@type": "xsd:string"
+    },
+    "fields_param": {
+      "@id": "addepar:fields_param",
+      "@type": "xsd:string"
+    },
+    "GetApiV1UsersUseridRelationshipsAssignedRoleResponse": "addepar:GetApiV1UsersUseridRelationshipsAssignedRoleResponse",
+    "GetApiV1UsersUseridRelationshipsPermissionedGroupsResponse": "addepar:GetApiV1UsersUseridRelationshipsPermissionedGroupsResponse",
+    "GetV1ArchiveFilesResponse": "addepar:GetV1ArchiveFilesResponse",
+    "is_folder": {
+      "@id": "addepar:is_folder",
+      "@type": "xsd:string"
+    },
+    "parent_folder_id": {
+      "@id": "addepar:parent_folder_id",
+      "@type": "xsd:decimal"
+    },
+    "associated_groups": {
+      "@id": "addepar:associated_groups",
+      "@container": "@list"
+    },
+    "associated_entities": {
+      "@id": "addepar:associated_entities",
+      "@container": "@list"
+    },
+    "GetV1ArchiveFilesIdResponse": "addepar:GetV1ArchiveFilesIdResponse",
+    "GetV1ArgumentsResponse": "addepar:GetV1ArgumentsResponse",
+    "included": {
+      "@id": "addepar:included",
+      "@container": "@list"
+    },
+    "GetV1ArgumentsIdResponse": "addepar:GetV1ArgumentsIdResponse",
+    "GetV1AttributesResponse": "addepar:GetV1AttributesResponse",
+    "GetV1AttributesIdResponse": "addepar:GetV1AttributesIdResponse",
+    "GetV1AttributesIdArgumentsResponse": "addepar:GetV1AttributesIdArgumentsResponse",
+    "GetV1AttributesIdRelationshipsArgumentsResponse": "addepar:GetV1AttributesIdRelationshipsArgumentsResponse",
+    "PostV1AttributesQueryRequest": "addepar:PostV1AttributesQueryRequest",
+    "attribute_keys": {
+      "@id": "addepar:attribute_keys",
+      "@container": "@list"
+    },
+    "PostV1AttributesQueryResponse": "addepar:PostV1AttributesQueryResponse",
+    "PostV1AuditTrailRequest": "addepar:PostV1AuditTrailRequest",
+    "object_type": {
+      "@id": "addepar:object_type",
+      "@type": "xsd:string"
+    },
+    "start_date": {
+      "@id": "addepar:start_date",
+      "@type": "xsd:string"
+    },
+    "end_date": {
+      "@id": "addepar:end_date",
+      "@type": "xsd:string"
+    },
+    "actions": {
+      "@id": "addepar:actions",
+      "@container": "@list"
+    },
+    "user_type": {
+      "@id": "addepar:user_type",
+      "@type": "xsd:string"
+    },
+    "users": {
+      "@id": "addepar:users",
+      "@container": "@list"
+    },
+    "PostV1AuditTrailResponse": "addepar:PostV1AuditTrailResponse",
+    "action": {
+      "@id": "addepar:action",
+      "@type": "xsd:string"
+    },
+    "performed_by_user_id": {
+      "@id": "addepar:performed_by_user_id",
+      "@type": "xsd:string"
+    },
+    "timestamp": {
+      "@id": "addepar:timestamp",
+      "@type": "xsd:string"
+    },
+    "source": {
+      "@id": "addepar:source",
+      "@type": "xsd:string"
+    },
+    "old_value": {
+      "@id": "addepar:old_value"
+    },
+    "new_value": {
+      "@id": "addepar:new_value"
+    },
+    "GetV1AuditTrailIdResponse": "addepar:GetV1AuditTrailIdResponse",
+    "GetV1BenchmarksResponse": "addepar:GetV1BenchmarksResponse",
+    "PatchV1BenchmarksRequest": "addepar:PatchV1BenchmarksRequest",
+    "PatchV1BenchmarksResponse": "addepar:PatchV1BenchmarksResponse",
+    "PostV1BenchmarksRequest": "addepar:PostV1BenchmarksRequest",
+    "benchmark_type": {
+      "@id": "addepar:benchmark_type",
+      "@type": "xsd:string"
+    },
+    "blended": {
+      "@id": "addepar:blended"
+    },
+    "fixed_return": {
+      "@id": "addepar:fixed_return"
+    },
+    "portfolio": {
+      "@id": "addepar:portfolio"
+    },
+    "security": {
+      "@id": "addepar:security"
+    },
+    "PostV1BenchmarksResponse": "addepar:PostV1BenchmarksResponse",
+    "GetV1BenchmarksIdResponse": "addepar:GetV1BenchmarksIdResponse",
+    "PatchV1BenchmarksIdRequest": "addepar:PatchV1BenchmarksIdRequest",
+    "PatchV1BenchmarksIdResponse": "addepar:PatchV1BenchmarksIdResponse",
+    "GetV1BillablePortfoliosResponse": "addepar:GetV1BillablePortfoliosResponse",
+    "entity_id": {
+      "@id": "addepar:entity_id",
+      "@type": "xsd:integer"
+    },
+    "group_id": {
+      "@id": "addepar:group_id",
+      "@type": "xsd:integer"
+    },
+    "schedule_id": {
+      "@id": "addepar:schedule_id",
+      "@type": "xsd:integer"
+    },
+    "is_archived": {
+      "@id": "addepar:is_archived",
+      "@type": "xsd:boolean"
+    },
+    "last_modified": {
+      "@id": "addepar:last_modified",
+      "@type": "xsd:string"
+    },
+    "PostV1BillablePortfoliosRequest": "addepar:PostV1BillablePortfoliosRequest",
+    "PostV1BillablePortfoliosResponse": "addepar:PostV1BillablePortfoliosResponse",
+    "GetV1BillablePortfoliosIdResponse": "addepar:GetV1BillablePortfoliosIdResponse",
+    "PatchV1BillablePortfoliosIdRelationshipsFeeSchedulesRequest": "addepar:PatchV1BillablePortfoliosIdRelationshipsFeeSchedulesRequest",
+    "PatchV1BillablePortfoliosRelationshipsFeeSchedulesRequest": "addepar:PatchV1BillablePortfoliosRelationshipsFeeSchedulesRequest",
+    "GetV1ContactsResponse": "addepar:GetV1ContactsResponse",
+    "PostV1ContactsRequest": "addepar:PostV1ContactsRequest",
+    "PostV1ContactsResponse": "addepar:PostV1ContactsResponse",
+    "GetV1ContactsContactIdRelationshipsDefaultViewSetResponse": "addepar:GetV1ContactsContactIdRelationshipsDefaultViewSetResponse",
+    "PostV1ContactsContactIdRelationshipsDefaultViewSetRequest": "addepar:PostV1ContactsContactIdRelationshipsDefaultViewSetRequest",
+    "GetV1ContactsContactIdRelationshipsEntityAffiliationsRespons": "addepar:GetV1ContactsContactIdRelationshipsEntityAffiliationsRespons",
+    "PatchV1ContactsContactIdRelationshipsEntityAffiliationsReque": "addepar:PatchV1ContactsContactIdRelationshipsEntityAffiliationsReque",
+    "PostV1ContactsContactIdRelationshipsEntityAffiliationsReques": "addepar:PostV1ContactsContactIdRelationshipsEntityAffiliationsReques",
+    "GetV1ContactsContactIdRelationshipsGroupAffiliationsResponse": "addepar:GetV1ContactsContactIdRelationshipsGroupAffiliationsResponse",
+    "PatchV1ContactsContactIdRelationshipsGroupAffiliationsReques": "addepar:PatchV1ContactsContactIdRelationshipsGroupAffiliationsReques",
+    "PostV1ContactsContactIdRelationshipsGroupAffiliationsRequest": "addepar:PostV1ContactsContactIdRelationshipsGroupAffiliationsRequest",
+    "GetV1ContactsContactIdRelationshipsTeamResponse": "addepar:GetV1ContactsContactIdRelationshipsTeamResponse",
+    "PatchV1ContactsContactIdRelationshipsTeamRequest": "addepar:PatchV1ContactsContactIdRelationshipsTeamRequest",
+    "GetV1ContactsIdResponse": "addepar:GetV1ContactsIdResponse",
+    "GetV1EntitiesResponse": "addepar:GetV1EntitiesResponse",
+    "model_type": {
+      "@id": "addepar:model_type",
+      "@type": "xsd:string"
+    },
+    "original_name": {
+      "@id": "addepar:original_name",
+      "@type": "xsd:string"
+    },
+    "currency_factor": {
+      "@id": "addepar:currency_factor",
+      "@type": "xsd:string"
+    },
+    "is_rolled_up": {
+      "@id": "addepar:is_rolled_up",
+      "@type": "xsd:boolean"
+    },
+    "ownership_type": {
+      "@id": "addepar:ownership_type",
+      "@type": "xsd:string"
+    },
+    "PatchV1EntitiesRequest": "addepar:PatchV1EntitiesRequest",
+    "investment_type": {
+      "@id": "addepar:investment_type",
+      "@type": "xsd:string"
+    },
+    "PatchV1EntitiesResponse": "addepar:PatchV1EntitiesResponse",
+    "PostV1EntitiesRequest": "addepar:PostV1EntitiesRequest",
+    "PostV1EntitiesResponse": "addepar:PostV1EntitiesResponse",
+    "PostV1EntitiesRequest2": "addepar:PostV1EntitiesRequest2",
+    "attributes.original_name": {
+      "@id": "addepar:attributes.original_name",
+      "@type": "xsd:string"
+    },
+    "attributes.model_type": {
+      "@id": "addepar:attributes.model_type",
+      "@type": "xsd:string"
+    },
+    "attributes.currency_factor": {
+      "@id": "addepar:attributes.currency_factor",
+      "@type": "xsd:string"
+    },
+    "PostV1EntitiesResponse2": "addepar:PostV1EntitiesResponse2",
+    "GetV1EntitiesIdResponse": "addepar:GetV1EntitiesIdResponse",
+    "PatchV1EntitiesIdRequest": "addepar:PatchV1EntitiesIdRequest",
+    "PatchV1EntitiesIdResponse": "addepar:PatchV1EntitiesIdResponse",
+    "GetV1EntityTypesResponse": "addepar:GetV1EntityTypesResponse",
+    "PatchV1EntityTypesRequest": "addepar:PatchV1EntityTypesRequest",
+    "PatchV1EntityTypesResponse": "addepar:PatchV1EntityTypesResponse",
+    "GetV1EntityTypesIdResponse": "addepar:GetV1EntityTypesIdResponse",
+    "GetV1FeesResponse": "addepar:GetV1FeesResponse",
+    "PostV1FeesRequest": "addepar:PostV1FeesRequest",
+    "PostV1FeesResponse": "addepar:PostV1FeesResponse",
+    "PutV1FeesRequest": "addepar:PutV1FeesRequest",
+    "PutV1FeesResponse": "addepar:PutV1FeesResponse",
+    "GetV1FeesFeeidResponse": "addepar:GetV1FeesFeeidResponse",
+    "PutV1FeesFeeidRequest": "addepar:PutV1FeesFeeidRequest",
+    "PutV1FeesFeeidResponse": "addepar:PutV1FeesFeeidResponse",
+    "GetV1FeesFeeidFeeSchedulesResponse": "addepar:GetV1FeesFeeidFeeSchedulesResponse",
+    "GetV1FeesFeeidRelationshipsFeeSchedulesResponse": "addepar:GetV1FeesFeeidRelationshipsFeeSchedulesResponse",
+    "GetV1FilesResponse": "addepar:GetV1FilesResponse",
+    "PostV1FilesRequest": "addepar:PostV1FilesRequest",
+    "file": {
+      "@id": "addepar:file",
+      "@type": "xsd:string"
+    },
+    "metadata": {
+      "@id": "addepar:metadata"
+    },
+    "file_path": {
+      "@id": "addepar:file_path",
+      "@type": "xsd:string"
+    },
+    "PostV1FilesResponse": "addepar:PostV1FilesResponse",
+    "GetV1FilesIdResponse": "addepar:GetV1FilesIdResponse",
+    "PatchV1FilesIdRequest": "addepar:PatchV1FilesIdRequest",
+    "PatchV1FilesIdResponse": "addepar:PatchV1FilesIdResponse",
+    "GetV1FilesIdRelationshipsAssociatedEntitiesResponse": "addepar:GetV1FilesIdRelationshipsAssociatedEntitiesResponse",
+    "PatchV1FilesIdRelationshipsAssociatedEntitiesRequest": "addepar:PatchV1FilesIdRelationshipsAssociatedEntitiesRequest",
+    "PostV1FilesIdRelationshipsAssociatedEntitiesRequest": "addepar:PostV1FilesIdRelationshipsAssociatedEntitiesRequest"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Addepar API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Addepar's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-20) from openapi/_ae-authored/addepar-openapi-generated.yml.",
+  "dcterms:created": "2026-10-20",
+  "dcterms:source": [
+    "openapi/_ae-authored/addepar-openapi-generated.yml"
+  ]
+}

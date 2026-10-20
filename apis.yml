@@ -1,16 +1,11 @@
 aid: addepar
 name: Addepar
-description: >-
-  Addepar is a wealth-management technology and data platform for investment
-  portfolio management, analysis, and reporting used by family offices, RIAs,
-  private banks, and wealth managers. Its REST API follows the JSON:API
-  specification (application/vnd.api+json) and exposes portfolio, transactions,
-  positions, entities, groups, attributes, benchmarks, files, jobs, roles,
-  teams, and users resources across Portfolio, Ownership Graph, and Admin
-  workflows. Access is secured with HTTP Basic authentication (API key/secret
-  plus an Addepar-Firm header) or an OAuth 2.0 authorization-code flow with
-  granular scopes. Addepar was surfaced as a portfolio company of 8VC and
-  Craft Ventures and enriched into the API Evangelist network.
+description: Addepar is a wealth-management technology and data platform for investment portfolio management, analysis, and reporting used by
+  family offices, RIAs, private banks, and wealth managers. Its REST API follows the JSON:API specification (application/vnd.api+json) and exposes
+  portfolio, transactions, positions, entities, groups, attributes, benchmarks, files, jobs, roles, teams, and users resources across Portfolio,
+  Ownership Graph, and Admin workflows. Access is secured with HTTP Basic authentication (API key/secret plus an Addepar-Firm header) or an OAuth
+  2.0 authorization-code flow with granular scopes. Addepar was surfaced as a portfolio company of 8VC and Craft Ventures and enriched into the
+  API Evangelist network.
 url: https://raw.githubusercontent.com/api-evangelist/addepar/refs/heads/main/apis.yml
 deliveryModel:
   model: saas
@@ -73,58 +68,23 @@ maintainers:
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-apis:
-- name: Addepar API
-  description: >-
-    JSON:API-based REST API for portfolio management, transactions, positions,
-    the ownership graph (entities/groups), attributes, benchmarks, files, jobs,
-    billing, reporting, and administration on the Addepar platform.
-  humanURL: https://developers.addepar.com/
-  baseURL: https://api.addepar.com/v1/
-  tags:
-  - Wealth Management
-  - Portfolio Management
-  - JSON:API
-  tags_raw:
-  - Wealth Management
-  - Portfolio Management
-  - JSON:API
-  - Portfolio-Management
-  properties:
-  - type: Documentation
-    url: https://developers.addepar.com/docs/welcome
-  - type: APIReference
-    url: https://developers.addepar.com/reference
-  - type: Authentication
-    url: authentication/addepar-authentication.yml
-  - type: OAuthScopes
-    url: scopes/addepar-scopes.yml
-  - type: Conventions
-    url: conventions/addepar-conventions.yml
-  - type: ErrorCatalog
-    url: errors/addepar-problem-types.yml
-  - type: RateLimits
-    url: rate-limits/addepar-rate-limits.yml
-  - type: DataModel
-    url: data-model/addepar-data-model.yml
-  - type: Packages
-    url: packages/addepar-packages.yml
-  - type: Lifecycle
-    url: lifecycle/addepar-lifecycle.yml
-  - type: Deprecation
-    url: lifecycle/addepar-lifecycle.yml
-  - type: ChangeLog
-    url: changelog/addepar-changelog.yml
-  - type: Conformance
-    url: conformance/addepar-conformance.yml
-  - type: Sandbox
-    url: sandbox/addepar-sandbox.yml
-  - type: X-MCPServerCandidate
-    url: mcp/addepar-mcp.yml
-    note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate — a tool list derived from the published API contracts, not an existing server. The scorer already read the manifest and reported mcp_server correctly; the MCPServer type was crediting the artifact-type surfaces with a server that does not exist.'
-  - type: LLMsTxt
-    url: llms/addepar-llms.txt
 common:
+- type: IntegrationEdges
+  url: integrations/addepar-integration-edges.yml
+- type: Spectral
+  url: rules/addepar-rules.yml
+- type: JSONLD
+  url: json-ld/addepar-context.jsonld
+- type: Vocabulary
+  url: vocabulary/addepar-vocabulary.yml
+- type: Hosts
+  url: hosts/addepar-hosts.yml
+- type: Vendors
+  url: vendors/addepar-vendors.yml
+- type: Sandbox
+  url: https://addepar.com/product-overview/sandbox
+- type: Newsroom
+  url: https://addepar.com/newsroom
 - type: RateLimits
   url: rate-limits/addepar-rate-limits.yml
 - type: Website
@@ -159,8 +119,87 @@ common:
   url: well-known/addepar-well-known.yml
 - type: LLMsTxt
   url: llms/addepar-llms.txt
+apis:
+- name: Addepar API
+  description: JSON:API-based REST API for portfolio management, transactions, positions, the ownership graph (entities/groups), attributes, benchmarks,
+    files, jobs, billing, reporting, and administration on the Addepar platform.
+  humanURL: https://developers.addepar.com/
+  baseURL: https://{firm}.addepar.com/api/v1
+  tags:
+  - Wealth Management
+  - Portfolio Management
+  - JSON:API
+  tags_raw:
+  - Wealth Management
+  - Portfolio Management
+  - JSON:API
+  - Portfolio-Management
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/addepar-openapi-generated.yml
+    note: Generated from the developer docs (x-generated-from documentation); Addepar publishes no machine-readable contract.
+  - type: Documentation
+    url: https://developers.addepar.com/docs/welcome
+  - type: APIReference
+    url: https://developers.addepar.com/reference
+  - type: Authentication
+    url: authentication/addepar-authentication.yml
+  - type: OAuthScopes
+    url: scopes/addepar-scopes.yml
+  - type: Conventions
+    url: conventions/addepar-conventions.yml
+  - type: ErrorCatalog
+    url: errors/addepar-problem-types.yml
+  - type: RateLimits
+    url: rate-limits/addepar-rate-limits.yml
+  - type: DataModel
+    url: data-model/addepar-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/addepar-lifecycle.yml
+  - type: Deprecation
+    url: lifecycle/addepar-lifecycle.yml
+  - type: ChangeLog
+    url: changelog/addepar-changelog.yml
+  - type: Conformance
+    url: conformance/addepar-conformance.yml
+  - type: Sandbox
+    url: sandbox/addepar-sandbox.yml
+  - type: X-MCPServerCandidate
+    url: mcp/addepar-mcp.yml
+    note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate — a tool list derived from the published
+      API contracts, not an existing server. The scorer already read the manifest and reported mcp_server correctly; the MCPServer type was crediting
+      the artifact-type surfaces with a server that does not exist.'
+  - type: LLMsTxt
+    url: llms/addepar-llms.txt
+  - type: JSONSchema
+    url: json-schema/addepar-post-v1-portfolio-query-request-schema.json
+  - type: JSONSchema
+    url: json-schema/addepar-get-api-v1-contacts-contactid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/addepar-get-api-v1-contacts-response-schema.json
+  - type: JSONSchema
+    url: json-schema/addepar-get-api-v1-contacts-contactid-relationships-group-affiliations-respo-schema.json
+  - type: JSONSchema
+    url: json-schema/addepar-get-v1-files-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/addepar-get-v1-files-response-schema.json
+  aid: addepar:addepar-api
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
-  pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+  date: '2026-10-20'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v5
+x-coverage:
+  state: gated
+  reason: partner-login
+  method: derived
+  generated: '2026-10-20'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: the company serves an API surface but requires credentials before any description of it can be read
+  evidence:
+  - url: https://developers.addepar.com/mcp
+    status: 401
+  - url: https://id.addepar.com/mcp
+    status: 403
+  - url: https://addepar.com
+    status: 200

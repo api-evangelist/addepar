@@ -4,10 +4,9 @@ source: https://developers.addepar.com/docs/urls
 aid: addepar
 name: Addepar Sandbox / Test Environments
 docs: https://developers.addepar.com/docs/urls
-summary: >-
-  Addepar provides non-production environments addressed by dedicated hostnames.
-  There are no publicly published static test credentials or test data fixtures;
-  access is provisioned per firm/partner.
+summary: Addepar provides non-production environments addressed by dedicated hostnames.
+  There are no publicly published static test credentials or test data fixtures; access
+  is provisioned per firm/partner.
 environments:
 - name: Development Environment
   host_pattern: https://firmdomain.clientdev.addepar.com/api/
@@ -18,4 +17,8 @@ production:
 - https://api.addepar.com/
 - https://firmdomain.addepar.com/api/
 notes:
-- Credentials are provisioned by Addepar per firm/partner; no static published test tokens or test cards (not a payments API).
+- Credentials are provisioned by Addepar per firm/partner; no static published test
+  tokens or test cards (not a payments API).
+description: Addepar provides non-production environments addressed by dedicated hostnames.
+  There are no publicly published static test credentials or test data fixtures; access
+  is provisioned per firm/partner.

@@ -7,8 +7,12 @@ docs: https://developers.addepar.com/docs/response-codes-1
 format: json:api
 media_type: application/vnd.api+json
 envelope:
-  note: Errors are returned as a JSON:API errors[] array; inspect the detail field (and source/type) for the specific cause. RFC 9457 problem+json is not used.
-  fields: [status, detail, source]
+  note: Errors are returned as a JSON:API errors[] array; inspect the detail field
+    (and source/type) for the specific cause. RFC 9457 problem+json is not used.
+  fields:
+  - status
+  - detail
+  - source
 statuses:
 - code: 200
   title: OK
@@ -27,7 +31,8 @@ statuses:
   meaning: Async job complete; follow the Location header for the result.
 - code: 400
   title: Bad Request
-  meaning: Malformed query parameters or payload, or request exceeded the 60s runtime limit.
+  meaning: Malformed query parameters or payload, or request exceeded the 60s runtime
+    limit.
 - code: 401
   title: Unauthorized
   meaning: Authentication failure.
@@ -55,3 +60,35 @@ statuses:
 - code: 500
   title: Internal Server Error
   meaning: Unexpected server error.
+problems:
+- status: 400
+  title: Bad Request
+  description: Malformed query parameters or payload, or request exceeded the 60s
+    runtime limit.
+- status: 401
+  title: Unauthorized
+  description: Authentication failure.
+- status: 403
+  title: Forbidden
+  description: Insufficient permissions.
+- status: 404
+  title: Not Found
+  description: Invalid URL or ID.
+- status: 405
+  title: Method Not Allowed
+  description: Unsupported HTTP verb for the resource.
+- status: 409
+  title: Conflict
+  description: Action would create an invalid data state.
+- status: 410
+  title: Gone
+  description: Resource expired.
+- status: 415
+  title: Unsupported Media Type
+  description: Invalid Content-Type header (expected application/vnd.api+json).
+- status: 429
+  title: Too Many Requests
+  description: Rate limit exceeded; see X-RateLimit-Retry-After.
+- status: 500
+  title: Internal Server Error
+  description: Unexpected server error.

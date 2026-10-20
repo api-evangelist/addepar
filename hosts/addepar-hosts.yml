@@ -1,0 +1,133 @@
+generated: '2026-10-20'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 9
+  own: 8
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - identity
+  - other
+  - portal
+  - source
+  - website
+hosts:
+- host: addepar.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Sandbox
+  - Newsroom
+  - Website
+  - Blog
+  - PrivacyPolicy
+  - Integrations
+  serves:
+  - hosting
+  vendor: netlify
+  registrable_domain: addepar.com
+  role: website
+  relation: own
+- host: api.addepar.com
+  found_by:
+  - probed
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: addepar.com
+  role: api
+  relation: own
+- host: developers.addepar.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - DeveloperPortal
+  - Documentation
+  - APIReference
+  - GettingStarted
+  - TermsOfService
+  serves:
+  - docs
+  - cdn
+  - documentation
+  vendor: cloudflare
+  registrable_domain: addepar.com
+  role: portal
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: id.addepar.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: addepar.com
+  role: other
+  relation: own
+- host: info.addepar.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - SignUp
+  serves: []
+  registrable_domain: addepar.com
+  role: identity
+  relation: own
+- host: integrations.addepar.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: addepar.com
+  role: other
+  relation: own
+- host: learn.addepar.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: addepar.com
+  role: other
+  relation: own
+- host: '{firm}.addepar.com'
+  found_by:
+  - apis[]
+  types: []
+  serves:
+  - api
+  registrable_domain: addepar.com
+  role: other
+  relation: own

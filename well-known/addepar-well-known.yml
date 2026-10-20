@@ -26,3 +26,10 @@ probes:
 - url: https://developers.addepar.com/.well-known/ai-plugin.json
   status: 404
   file: null
+hosts:
+- host: developers.addepar.com
+  documents: []
+- host: addepar.com
+  documents: []
+- host: api.addepar.com
+  documents: []
