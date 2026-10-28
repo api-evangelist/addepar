@@ -64,6 +64,134 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Addepar is a company surfaced as a portfolio company of 8vc, craft-ventures and added to the API Evangelist network as a stub for enrichment. Sector: fintech. This profile is a lead awaiting the enrichment pipeline.
+Addepar is a wealth-management technology and data platform for investment portfolio management, analysis, and reporting used by family offices, RIAs, private banks, and wealth managers. Its REST API follows the JSON:API specification (application/vnd.api+json) and exposes portfolio, transactions, positions, entities, groups, attributes, benchmarks, files, jobs, roles, teams, and users resources across Portfolio, Ownership Graph, and Admin workflows. Access is secured with HTTP Basic authentication (API key/secret plus an Addepar-Firm header) or an OAuth 2.0 authorization-code flow with granular scopes. Addepar was surfaced as a portfolio company of 8VC and Craft Ventures and enriched into the API Evangelist network.
 
-Backed by: 8vc, craft-ventures — https://addepar.com
+**Areas:** Company · Fintech · Wealth Management · Portfolio Management · Investment Management · Financial Data · JSON:API · REST
+
+## Addepar on APIs.io
+
+Everything profiled for Addepar is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/addepar/](https://apis.io/providers/addepar/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Addepar API](https://apis.io/apis/addepar/addepar-api/) — JSON:API-based REST API for portfolio management, transactions, positions, the ownership graph (entities/groups), attributes, benchmarks, files, jobs,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Addepar MCP (candidate)](https://apis.io/servers/addepar/addepar-mcp-candidate/)
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [GetApiV1ContactsContactidRelationshipsGroupAffiliationsRespo](https://apis.io/schemas/addepar/addepar-get-api-v1-contacts-contactid-relationships-group-affiliations-respo/)
+- [GetApiV1ContactsContactidResponse](https://apis.io/schemas/addepar/addepar-get-api-v1-contacts-contactid-response/)
+- [GetApiV1ContactsResponse](https://apis.io/schemas/addepar/addepar-get-api-v1-contacts-response/)
+- [GetV1FilesIdResponse](https://apis.io/schemas/addepar/addepar-get-v1-files-id-response/)
+- [GetV1FilesResponse](https://apis.io/schemas/addepar/addepar-get-v1-files-response/)
+- [PostV1PortfolioQueryRequest](https://apis.io/schemas/addepar/addepar-post-v1-portfolio-query-request/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Addepar Context](https://apis.io/jsonld/addepar/addepar-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Addepar API Rules](https://apis.io/rules/addepar/addepar-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Addepar Authentication](https://apis.io/security/addepar/addepar-authentication/)
+- [Addepar Domain Security](https://apis.io/security/addepar/addepar-domain-security/)
+- [Addepar Trust Center](https://apis.io/security/addepar/addepar-trust-center/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Addepar Scopes](https://apis.io/scopes/addepar/addepar-scopes/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Addepar Rate Limits](https://apis.io/rate-limits/addepar/addepar-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://addepar.com)
+- [Documentation](https://developers.addepar.com/docs/welcome)
+- [Getting started](https://developers.addepar.com/docs/get-setup)
+- [API reference](https://developers.addepar.com/reference)
+- [Sign up](https://info.addepar.com/api-signup-list.html)
+- [Blog](https://addepar.com/blog)
+- [Terms of service](https://developers.addepar.com/docs/terms-of-use)
+- [Privacy policy](https://addepar.com/legal/privacy-policy)
+- [GitHub](https://github.com/Addepar)
+
+## API Evangelist rating
+
+**Kin Score 53.6** — developing · rubric 0.24.0 · scored 2026-10-20
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 35.6 |
+| Contract governance | 80.9 |
+| Operational transparency | 47.4 |
+| Developer ergonomics | 45.2 |
+| Access clarity | 44.7 |
+
+**Agent readiness 20.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 37.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/addepar/](https://apis.io/providers/addepar/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Addepar: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/addepar/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
