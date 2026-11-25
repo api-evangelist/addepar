@@ -66,7 +66,7 @@
 
 Addepar is a wealth-management technology and data platform for investment portfolio management, analysis, and reporting used by family offices, RIAs, private banks, and wealth managers. Its REST API follows the JSON:API specification (application/vnd.api+json) and exposes portfolio, transactions, positions, entities, groups, attributes, benchmarks, files, jobs, roles, teams, and users resources across Portfolio, Ownership Graph, and Admin workflows. Access is secured with HTTP Basic authentication (API key/secret plus an Addepar-Firm header) or an OAuth 2.0 authorization-code flow with granular scopes. Addepar was surfaced as a portfolio company of 8VC and Craft Ventures and enriched into the API Evangelist network.
 
-**Areas:** Company · Fintech · Wealth Management · Portfolio Management · Investment Management · Financial Data · JSON:API · REST
+**Areas:** Company · Fintech · Wealth Management · Portfolio Management · Investment Management · Financial Data · Family Offices · RIA · JSON:API · REST
 
 ## Addepar on APIs.io
 
@@ -90,24 +90,24 @@ Model Context Protocol servers that expose the API to agents.
 
 The data models the API reads and writes.
 
-- [GetApiV1ContactsContactidRelationshipsGroupAffiliationsRespo](https://apis.io/schemas/addepar/addepar-get-api-v1-contacts-contactid-relationships-group-affiliations-respo/)
-- [GetApiV1ContactsContactidResponse](https://apis.io/schemas/addepar/addepar-get-api-v1-contacts-contactid-response/)
-- [GetApiV1ContactsResponse](https://apis.io/schemas/addepar/addepar-get-api-v1-contacts-response/)
-- [GetV1FilesIdResponse](https://apis.io/schemas/addepar/addepar-get-v1-files-id-response/)
-- [GetV1FilesResponse](https://apis.io/schemas/addepar/addepar-get-v1-files-response/)
-- [PostV1PortfolioQueryRequest](https://apis.io/schemas/addepar/addepar-post-v1-portfolio-query-request/)
+- [Moved to /providers/addepar/](https://apis.io/schemas/addepar/addepar-get-api-v1-contacts-contactid-relationships-group-affiliations-respo/)
+- [Moved to /providers/addepar/](https://apis.io/schemas/addepar/addepar-get-api-v1-contacts-contactid-response/)
+- [Moved to /providers/addepar/](https://apis.io/schemas/addepar/addepar-get-api-v1-contacts-response/)
+- [Moved to /providers/addepar/](https://apis.io/schemas/addepar/addepar-get-v1-files-id-response/)
+- [Moved to /providers/addepar/](https://apis.io/schemas/addepar/addepar-get-v1-files-response/)
+- [Moved to /providers/addepar/](https://apis.io/schemas/addepar/addepar-post-v1-portfolio-query-request/)
 
 #### JSON-LD (1)
 
 Linked-data contexts for the provider's vocabulary.
 
-- [Addepar Context](https://apis.io/jsonld/addepar/addepar-context/)
+- [Moved to /providers/addepar/](https://apis.io/jsonld/addepar/addepar-context/)
 
 #### Governance rules (1)
 
 Spectral rulesets for the provider's contracts.
 
-- [Addepar API Rules](https://apis.io/rules/addepar/addepar-rules/)
+- [Moved to /providers/addepar/](https://apis.io/rules/addepar/addepar-rules/)
 
 #### Security (3)
 
@@ -122,6 +122,12 @@ Authentication, trust centre, and vulnerability disclosure.
 The permissions the API asks for.
 
 - [Addepar Scopes](https://apis.io/scopes/addepar/addepar-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Addepar Plans Pricing](https://apis.io/plans/addepar/addepar-plans-pricing/)
 
 #### Rate limits (1)
 
@@ -145,22 +151,22 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 53.6** — developing · rubric 0.24.0 · scored 2026-10-20
+**Kin Score 39.0** — thin · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
 | Discoverability | 75.0 |
-| Contract quality | 35.6 |
-| Contract governance | 80.9 |
-| Operational transparency | 47.4 |
-| Developer ergonomics | 45.2 |
-| Access clarity | 44.7 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 54.8 |
+| Developer ergonomics | 50.0 |
+| Access clarity | 48.9 |
 
-**Agent readiness 20.9** — agent-aware
+**Agent readiness 7.7** — agent-aware
 
 | Agent-readiness dimension | Result |
 |---|---|
-| Spec Presence | yes |
+| Spec Presence | — |
 | Agentic Access | — |
 | Reversibility Documented | — |
 | MCP Server | — |
@@ -179,8 +185,14 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Protected Resource Metadata | — |
 | Dynamic Client Registration | — |
 | Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | na |
 
-**Regulatory alignment 37.3** — Horizontal (data, software, accessibility, platform)
+**Regulatory alignment 31.4** — Horizontal (data, software, accessibility, platform)
 
 The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/addepar/](https://apis.io/providers/addepar/).
 
